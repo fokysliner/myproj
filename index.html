@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Redirect</title>
+    <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1466778384310951'); 
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=1466778384310951&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #a8dadc 0%, #f1faee 100%);
+      background-image: url('background.png'); 
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #fff;
+      padding: 14px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      border-radius: 0 0 18px 18px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+    }
+    .logo span {
+      font-size: 22px;
+      font-weight: bold;
+      color: #3b3b3b;
+      letter-spacing: 0.5px;
+    }
+    .download-btn {
+      display: inline-block;
+      padding: 9px 25px;
+      background: #2498ee;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 22px;
+      font-size: 17px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+      transition: background 0.3s;
+      letter-spacing: 0.4px;
+    }
+    .download-btn:hover {
+      background: #1277c7;
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 10px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 44px 38px 36px 38px;
+      text-align: center;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.13);
+      margin-top: 15px;
+    }
+    .brand-img {
+      width: 140px;
+      margin-bottom: 22px;
+    }
+    .company-name {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #232323;
+    }
+    .handle {
+      color: #969696;
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+    .description {
+      font-size: 17px;
+      color: #232323;
+      margin-bottom: 28px;
+    }
+    .card-btn {
+      display: inline-block;
+      padding: 13px 36px;
+      background: #2498ee;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 24px;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+      transition: background 0.3s;
+    }
+    .card-btn:hover {
+      background: #1277c7;
+    }
+    @media (max-width: 600px) {
+      .card { padding: 24px 8px; }
+      .brand-img { width: 100px; }
+      .company-name { font-size: 21px; }
+      .card-btn { padding: 10px 16px; font-size: 15px; }
+      header { padding: 8px 8px; }
+      .logo span { font-size: 16px; }
+    }
+body { background: url('tg-bg.png') center/cover no-repeat fixed; }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images.png" alt="Telegram Logo">
+      <span>Telegram</span>
+    </div>
+    <a href="https://t.me/Meja_prava" class="download-btn">DOWNLOAD</a>
+  </header>
+  <div class="content">
+    <div class="card">
+      <img src="images.png" class="brand-img" alt="Company Logo">
+      <div class="company-name">"Межа Права" Юридична компанія</div>
+      <div class="handle">@Meja_prava</div>
+      <div class="description">
+        Спеціалізуємось на допомозі військово зобов'язаним, життя коштує дорожче
+      </div>
+      <a href="https://t.me/Meja_prava" class="card-btn">SEND MESSAGE</a>
+    </div>
+  </div>
+  <script>
+  // Відстеження кліків по всім посиланням-кнопкам
+  document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('.download-btn, .card-btn');
+    buttons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        fbq('track', 'Lead'); // або інший event (наприклад, 'Contact', 'ViewContent')
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
